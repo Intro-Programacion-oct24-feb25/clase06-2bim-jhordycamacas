@@ -17,7 +17,7 @@ public class Ejemplo12 {
         Scanner entrada = new Scanner(System.in);
         System.out.println("Ingrese cuantas operaciones quiere realizar");
         int valor = entrada.nextInt();
-        int [] resultados = new int[valor];
+        int[] resultados = new int[valor];
         boolean bandera = true;
         while (bandera) {
             try {
@@ -52,5 +52,8 @@ public class Ejemplo12 {
         números ingresados por teclado; el resultado de cada división debe ir 
         almacenandose en cada posición del arreglo. Considerar las excepciones
         posibles*/
+        //RECORDAR-Hacer sin el for en casa
+        //Los catch no vuelven a donde los llamaron, siguen ejecutando las 
+        //siguientes lineas de codigo
     }
 }
