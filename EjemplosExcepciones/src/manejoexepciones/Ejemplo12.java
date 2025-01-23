@@ -17,25 +17,26 @@ public class Ejemplo12 {
         Scanner entrada = new Scanner(System.in);
         System.out.println("Ingrese cuantas operaciones quiere realizar");
         int valor = entrada.nextInt();
-        double [] resultados = new double[valor];
+        int [] resultados = new int[valor];
         boolean bandera = true;
         while (bandera) {
             try {
                 for (int i = 0; i < resultados.length; i++) {
                     System.out.println("Ingrese valor 1");
-                    double valor1 = entrada.nextDouble();
+                    int valor1 = entrada.nextInt();
                     System.out.println("Ingrese valor 2");
-                    double valor2 = entrada.nextDouble();
+                    int valor2 = entrada.nextInt();
 
-                    double resultado = valor1 / valor2;
+                    int resultado = valor1 / valor2;
 
-                    resultado = resultados[i];
+                    resultados[i] = resultado;
                 }
                 bandera = false;
 
             } catch (InputMismatchException inputMismatchException) {
                 System.out.printf("Existe un error de tipo %s\n",
                         inputMismatchException);
+                entrada.nextLine();
             } catch (ArithmeticException arithmeticException) {
                 // enviar un correo programa
                 System.out.println("Lo sentimos hay un error");
@@ -45,7 +46,7 @@ public class Ejemplo12 {
 
         }
         for (int i = 0; i < resultados.length; i++) {
-            System.out.printf("%.2f", resultados[i]);
+            System.out.printf("%d\n", resultados[i]);
         }
         /*Realizar un proceso repetitivo que permita realizar la división de 
         números ingresados por teclado; el resultado de cada división debe ir 
